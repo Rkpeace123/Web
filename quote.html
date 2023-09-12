@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote</title>
+  <link rel="stylesheet" href="quiz.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+  <div class="background-video">
+    <!-- Add your background video source here -->
+    <video autoplay muted loop>
+      <source src="images/v2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <button class="back-to-home" onclick="window.location.href='website.html'">Back to Home</button>
+  
+  <div class="container">
+ 
+   
+
+    <form action="https://formspree.io/f/maygbwnl" method="POST" class="form">
+      <h1 class="text-center">Get a Quote</h1>
+      <!-- Progress bar -->
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        <div class="progress-step progress-step-active" data-title="Route Details"></div>
+        <div class="progress-step" data-title="Shipment Details"></div>
+        <div class="progress-step" data-title="Contact Details"></div>
+      </div>
+    
+      <div class="form-step form-step-active">
+        <h1>Step 1: Route Details</h1>
+        <div class="input-group">
+          <label for="originCompany">Origin Company:</label>
+          <input type="text" id="originCompany" name="originCompany" placeholder="Company Name" />
+        </div>
+        <div class="input-group">
+          <label for="originCountry">Origin Country:</label>
+          <input type="text" id="originCountry" name="originCountry" placeholder="Country" />
+        </div>
+        <div class="input-group">
+          <label for="originLocation">Origin Pickup Location:</label>
+          <input type="text" id="originLocation" name="originLocation" placeholder="Pickup Location" />
+        </div>
+        <div class="input-group">
+          <label for="destinationCompany">Destination Company:</label>
+          <input type="text" id="destinationCompany" name="destinationCompany" placeholder="Company Name" />
+        </div>
+        <div class="input-group">
+          <label for="destinationCountry">Destination Country:</label>
+          <input type="text" id="destinationCountry" name="destinationCountry" placeholder="Country" />
+        </div>
+        <div class="input-group">
+          <label for="destinationLocation">Destination Delivery Location:</label>
+          <input type="text" id="destinationLocation" name="destinationLocation" placeholder="Delivery Location" />
+        </div>
+      
+        <div class="btns-group">
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+    
+      <div class="form-step">
+        <h1>Step 2: Shipment Details</h1>
+        <div class="input-group">
+          <label for="transportation_mode">Mode of Transportation:</label>
+          <select id="transportation_mode" name="transportation_mode" required>
+            <option value="air">Air</option>
+            <option value="sea">Sea</option>
+            <option value="road">Road</option>
+            <option value="rail">Rail</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="shipmentType">Shipment Type:</label>
+          <select id="shipmentType" required>
+            <option value="LCL">LCL (Less than Container Load)</option>
+            <option value="FCL">FCL (Full Container Load)</option>
+            <option value="airFreight">Air Freight</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="container_type">Container Type:</label>
+          <select id="container_type" name="container_type">
+            <option value="standard">Standard</option>
+            <option value="reefer">Reefer (Temperature-controlled)</option>
+            <option value="open-top">Open Top</option>
+            <option value="flat-rack">Flat Rack</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="container_size">Container Size:</label>
+          <select id="container_size" name="container_size">
+            <option value="20-ft">20ft</option>
+            <option value="40-ft">40ft</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="shipmentPieces">Pieces:</label>
+          <input type="number" id="shipmentPieces" placeholder="Pieces" required>
+        </div>
+        <div class="input-group">
+          <label for="packageType">Package Type:</label>
+          <select id="packageType" required>
+            <option value="Crate(s)">Crate(s)</option>
+            <option value="Pallet(s)">Pallet(s)</option>
+            <option value="Box(es)">Box(es)</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="weightPerPiece">Weight/Piece (kg):</label>
+          <input type="number" id="weightPerPiece" placeholder="Weight/Piece (kg)" required>
+        </div>
+        <div class="input-group">
+          <label for="lengthPerPiece">Length/Piece (cm):</label>
+          <input type="number" id="lengthPerPiece" placeholder="Length/Piece (cm)">
+        </div>
+        <div class="input-group">
+          <label for="widthPerPiece">Width/Piece (cm):</label>
+          <input type="number" id="widthPerPiece" placeholder="Width/Piece (cm)">
+        </div>
+        <div class="input-group">
+          <label for="heightPerPiece">Height/Piece (cm):</label>
+          <input type="number" id="heightPerPiece" placeholder="Height/Piece (cm)">
+        </div>
+        <div class="input-group">
+          <label for="incoterms">Incoterms:</label>
+          <input type="text" id="incoterms" placeholder="Incoterms" required>
+        </div>
+        <div class="input-group">
+          <label for="serv">Any other services:</label>
+          <input type="text" id="serv" placeholder="Any other services" required>
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+      
+      
+    
+      
+      <div class="form-step">
+        <h1>Step 3: Contact Details</h1>
+        <div class="input-group">
+          <label for="contactName">Full Name:</label>
+          <input type="text" id="contactName" name="contactName" placeholder="Full Name" required>
+        </div>
+        <div class="input-group">
+          <label for="contactCompany">Company Name:</label>
+          <input type="text" id="contactCompany" name="contactCompany" placeholder="Company Name" required>
+        </div>
+        <div class="input-group">
+          <label for="contactEmail">Email:</label>
+          <input type="email" id="contactEmail" name="contactEmail" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <label for="contactPhone">Phone:</label>
+          <input type="tel" id="contactPhone" name="contactPhone" placeholder="Phone" required>
+        </div>
+        <div class="input-group">
+          <label for="contactStreet">Street and Number:</label>
+          <input type="text" id="contactStreet" name="contactStreet" placeholder="Street and Number" required>
+        </div>
+        <div class="input-group">
+          <label for="contactZip">ZIP Code:</label>
+          <input type="text" id="contactZip" name="contactZip" placeholder="ZIP Code" required>
+        </div>
+        <div class="input-group">
+          <label for="contactCity">City:</label>
+          <input type="text" id="contactCity" name="contactCity" placeholder="City" required>
+        </div>
+        <div class="input-group">
+          <label for="contactCountry">Country:</label>
+          <input type="text" id="contactCountry" name="contactCountry" placeholder="Country" required>
+        </div>
+        <div class="input-group">
+          <label for="latestDeliveryDate">Latest Delivery Date:</label>
+          <input type="date" id="latestDeliveryDate" name="latestDeliveryDate" placeholder="Latest Delivery Date" required>
+        </div>
+        <div class="input-group">
+          <label for="contactMessage">Message (optional):</label>
+          <textarea id="contactMessage" name="contactMessage" rows="4" placeholder="Message (optional)"></textarea>
+        </div>
+        <div class="input-group">
+          <input type="checkbox" id="contactAgree" name="contactAgree" required>
+          <label for="contactAgree">I agree to be contacted by Vakkiyl regarding my quotation request</label>
+        </div>
+    
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <button type="submit" class="btn btn-submit">Submit</button>
+        </div>
+      </div>
+      <!-- Success message container -->
+     
+    </form>
+  </div>
+
+  <script src="s.js"></script>
+</body>
+</html>

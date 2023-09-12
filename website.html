@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website Title</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+     <!-- Video Banner -->
+     <div id="banner">
+        <video autoplay muted loop>
+            <source src="images/v1.mp4" type="video/mp4">
+            <!-- Add additional sources for different video formats -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+  <!-- Header Section -->
+  <header class="header">
+    <nav>
+      <a href="website.html"><img src="images/logo.PNG" alt="Your Logo"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-rectangle-xmark" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="website.html">HOME</a></li>
+          <li><a href="quote.html">GET A QUOTE</a></li>
+          <li><a href="service.html">SERVICES</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+          <li><a href="cont.html">CONTACT US</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    
+  </header>
+
+  <div class="text1">
+    <h1>How Vakkiyl Works</h1>
+    <a href="#section-to-scroll" class="scroll-icon"><i class="fas fa-caret-down"></i></a>
+</div>
+
+    <div class="text-box">
+    <h1>Simple, Easy & Fast:</h1>
+    <p> Your One-Stop Solution for Logistics</p>
+    </div>
+  
+<div class="quote-container">
+    <div class="quote">
+        <form action="submit_contact.php" method="POST">
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" placeholder="Place of Loading" required>
+
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" placeholder="Place of Delivery" required>
+
+            <a href="quote.html" class="hero-btn">Get a Quote</a>
+        </form>
+    </div>
+</div>
+ 
+
+
+
+
+  <div class="wrapper">
+    <div class="center-line">
+        
+        <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
+    </div>
+    <div id="section-to-scroll" class="scroll-target"></div>
+    <!-- Step 1: User Data Input -->
+    <div class="row row-1">
+        
+           
+        <section>
+            <img src="images/step1.png" alt="User Data Input" class="step-image">
+             
+            <i class="icon fas fa-user"></i>
+            <div class="details">
+                <span class="title">User Data Input</span>
+            </div>
+            <p>Collect relevant information from the customer such as shipment details, origin, destination, cargo type, and other specifics.</p>
+            <div class="bottom">
+                <a href="quote.html">Read more</a>
+            </div>
+        </section>
+    </div>
+    <!-- Step 2: Request for Quotation -->
+    <div class="row row-2">
+        <section>
+            <img src="images/step2.png" alt="Request for Quotation" class="step-image">
+            <i class="icon fas fa-file-alt"></i>
+            <div class="details">
+                <span class="title">Request for Quotation</span>
+            </div>
+            <p>We use the provided data to generate a quotation for the shipping service. Once the customer approves, we proceed with the logistics process.</p>
+            <div class="bottom">
+                <a href="quote.html">Read more</a>
+            </div>
+        </section>
+    </div>
+    <!-- Step 3: Freight Forwarding -->
+    <div class="row row-1">
+        <section>
+            <img src="images/step3.jpg" alt="Freight Forwarding" class="step-image">
+            <i class="icon fas fa-ship"></i>
+             <div class="details">
+                <span class="title">Freight Forwarding</span>
+            </div>
+            <p>We coordinate the transportation of the cargo through various modes including sea, air, and land. Our expert team ensures the safe and efficient movement of your goods to their destination.</p>
+            <div class="bottom">
+                <a href="service.html">Read more</a>
+            </div>
+        </section>
+    </div>
+    <!-- Step 4: Warehousing and Distribution -->
+<div class="row row-2">
+    <section>
+        <img src="images/step4.jpg" alt="Warehousing and Distribution" class="step-image">
+        <i class="icon fas fa-warehouse"></i>
+        <div class="details">
+            <span class="title">Warehousing and Distribution</span>
+        </div>
+        <p>Upon arrival at our warehouse, we handle the storage and distribution of your cargo. Our facilities are equipped to store goods securely, and we ensure timely delivery to the intended recipients.</p>
+        <div class="bottom">
+            <a href="service.html">Read more</a>
+        </div>
+    </section>
+</div>
+
+<!-- Step 5: Customs Clearance -->
+<div class="row row-1">
+    <section>
+        <img src="images/step5.jpg" alt="Customs Clearance" class="step-image">
+        <i class="icon fas fa-clipboard-check"></i>
+        <div class="details">
+            <span class="title">Customs Clearance</span>
+        </div>
+        <p>We navigate the complexities of customs procedures to ensure your cargo complies with international regulations. This includes documentation, duty payment, and adherence to customs requirements.</p>
+        <div class="bottom">
+            <a href="service.html">Read more</a>
+        </div>
+    </section>
+</div>
+
+<!-- Step 6: Shipment Tracking -->
+<div class="row row-2">
+    <section>
+        <img src="images/step6.jpg" alt="Shipment Tracking" class="step-image">
+        <i class="icon fas fa-shipping-fast"></i>
+        <div class="details">
+            <span class="title">Shipment Tracking</span>
+        </div>
+        <p>We provide tools for tracking your shipment in real-time. You can monitor the progress and location of your cargo throughout its journey.</p>
+        <div class="bottom">
+            <a href="tracking.html">Read more</a>
+        </div>
+    </section>
+</div>
+<!-- Step 7: Payment Processing -->
+<div class="row row-1">
+  <section>
+      <img src="images/step7.png" alt="Payment Processing " class="step-image">
+      <i class="icon fas fa-credit-card"></i>
+      <div class="details">
+          <span class="title">Payment Processing</span>
+      </div>
+      <p>Once the services are completed, we process the payment for transportation, customs clearance, and any additional charges. We ensure a transparent and efficient payment process.</p>
+      <div class="bottom">
+          <a href="aboutus.html">Read more</a>
+      </div>
+  </section>
+</div>
+
+<!-- Step 8: Customer Support -->
+<div class="row row-2">
+  <section>
+      <img src="images/step8.avif" alt="Customer Support" class="step-image">
+      <i class="icon fas fa-headset"></i>
+<div class="details">
+          <span class="title">Customer Support</span>
+      </div>
+      <p>Our dedicated customer support team is available to address any inquiries or issues related to your shipment. We are here to assist you throughout the logistics process.</p>
+      <div class="bottom">
+          <a href="contact">Read more</a>
+      </div>
+  </section>
+</div>
+
+</div>
+</div>
+<button class="scroll-down">
+    <i class="fas fa-caret-down"></i>
+</button>
+
+    <!-- Footer Section -->
+   <div class="footer">
+    <a href="website.html">HOME</a>
+    <a href="quote.html">GET A QUOTE</a>
+    <a href="service.html">SERVICES</a>
+    <a href="aboutus.html">ABOUT US</a>
+    <a href="cont.html">CONTACT US</a>
+
+        <div class="contact-info">
+            <h4>CONTACT INFO</h4>
+            <p>
+                Head Office:<br>
+                Lakshmi Towers, First Floor,<br>
+                No. 33/17, Thambu Chetty Street,<br>
+                Chennai - 600 001.<br>
+                TEL : +91-44-42666689 / 91<br>
+                E-Mail : consol@vakkiyl.com
+            </p>
+<br>
+            <p>
+                Branch Office:<br>
+                Vakkiyl Trade Solutions,<br>
+                No. 973/974, Trichy High Road,<br>
+                Ramanathapuram,<br>
+                Coimbatore - 641 041.<br>
+                TEL : 0422-4506689<br>
+                E-Mail : sales.cbe@vakkiyl.com
+            </p>
+<br>
+            <p>
+                UK Office (Network Partner):<br>
+                Victory Logistics Ltd. Westdrayton,<br>
+                No:21, Dell Road, Middlesex, UB7 9HN.<br>
+                TEL : 01895465200<br>
+                E-Mail : consol@vakkiyl.com
+            </p>
+        </div>
+
+        <div class="quick-enquiry">
+            <h4>QUICK ENQUIRY</h4>
+            <form
+            action="https://formspree.io/f/mwkdbdgy"
+            method="POST">
+            <input type="text" placeholder="Enter Your Name">
+            <input type="text" placeholder="Enter Company Name">
+            <input type="text" placeholder="Enter Phone Number">
+            <input type="email" placeholder="Enter your Email">
+            <textarea placeholder="Enter your Message"></textarea>
+            <button>Submit</button>
+            </form>
+        </div>
+    
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <h5>This website was developed by<a href="https://www.linkedin.com/in/richard-s-35116b278">Richard S</a></h5>
+        </div>
+    </footer>
+
+</html>
